@@ -1,0 +1,121 @@
+\RequirePackage{silence} % :-\
+    \WarningFilter{scrreprt}{Usage of package `titlesec'}
+    %\WarningFilter{scrreprt}{Activating an ugly workaround}
+    \WarningFilter{titlesec}{Non standard sectioning command detected}
+\documentclass[ twoside,openright,titlepage,numbers=noenddot,%1headlines,
+                headinclude,footinclude,cleardoublepage=empty,abstract=on,
+                BCOR=5mm,paper=a4,fontsize=11pt
+                ]{scrreprt}
+
+\usepackage{listings}
+
+%********************************************************************
+% Note: Make all your adjustments in here
+%*******************************************************
+\input{classicthesis-config}
+
+%********************************************************************
+% Bibliographies
+%*******************************************************
+\addbibresource{Bibliography.bib}
+\addbibresource[label=ownpubs]{AMiede_Publications.bib}
+
+%********************************************************************
+% Hyphenation
+%*******************************************************
+%\hyphenation{put special hyphenation here}
+
+% ********************************************************************
+% GO!GO!GO! MOVE IT!
+%*******************************************************
+\begin{document}
+\frenchspacing
+\raggedbottom
+\selectlanguage{american} % american ngerman
+%\renewcommand*{\bibname}{new name}
+%\setbibpreamble{}
+\pagenumbering{roman}
+\pagestyle{plain}
+%********************************************************************
+% Frontmatter
+%*******************************************************
+%\include{FrontBackmatter/DirtyTitlepage}
+\include{FrontBackmatter/Titlepage}
+%\include{FrontBackmatter/Titleback}
+%\cleardoublepage\include{FrontBackmatter/Dedication}
+%\cleardoublepage\include{FrontBackmatter/Foreword}
+%\cleardoublepage\include{FrontBackmatter/Abstract}
+%\cleardoublepage\include{FrontBackmatter/Publications}
+%\cleardoublepage\include{FrontBackmatter/Acknowledgments}
+\cleardoublepage\include{FrontBackmatter/Contents}
+%********************************************************************
+% Mainmatter
+%*******************************************************
+\cleardoublepage
+\pagestyle{scrheadings}
+\pagenumbering{arabic}
+%\setcounter{page}{90}
+% use \cleardoublepage here to avoid problems with pdfbookmark
+
+
+\part{Introduction}\label{pt:introduction}
+\include{chapters/chapter-intro-to-javaee}
+
+%\part{Old-style Java EE}\label{pt:old-style}
+%\chapter{Client and presentation tier}\label{ch:first-steps}
+%\section{The Model View Controller pattern}
+%\section{AJAX and the Single Page Application pattern}
+%\section{The Inversion of Control pattern}
+%\section{The Pipes and Filters pattern}
+%\section{Concurrency in the Servlet API}
+%
+%\chapter{Business tier}\label{ch:first-steps}
+%\section{The Dependency Injection pattern}
+%\section{Enterprise Java Beans}
+%
+%\chapter{Integration tier}\label{ch:first-steps}
+%\section{The Data Access Object pattern}
+%\section{Java DataBase Connectivity}
+%\section{Boiler plate code and reflection}
+%\section{Object Relational Mapping}
+%
+%\part{Modern Java EE}\label{pt:old-style}
+%
+%\chapter{Micro-services with Springboot}\label{ch:first-steps}
+%\section{The Spring Framework}
+%\section{The Springboot Project}
+%\section{Micro-services}
+%
+%\chapter{Persistence with Spring Data}\label{ch:first-steps}
+%
+%\chapter{APIs with Spring Data REST}\label{ch:first-steps}
+%
+%\part{Software engineering practices}\label{pt:old-style}
+%
+%\chapter{Contract-first development of REST APIs}\label{ch:first-steps}
+%\chapter{Continuous integration}\label{ch:first-steps}
+%\chapter{Load and performance testing}\label{ch:first-steps}
+%\chapter{User Interface testing}\label{ch:first-steps}
+%\chapter{Behaviour Driven Design}\label{ch:first-steps}
+
+
+%\include{multiToC} % <--- just debug stuff, ignore for your documents
+% ********************************************************************
+% Backmatter
+%*******************************************************
+%\appendix
+%\renewcommand{\thechapter}{\alph{chapter}}
+%\cleardoublepage
+%\part{Appendix}
+%\include{Chapters/Chapter0A}
+%********************************************************************
+% Other Stuff in the Back
+%*******************************************************
+%\cleardoublepage\include{FrontBackmatter/Bibliography}
+%\cleardoublepage\include{FrontBackmatter/Declaration}
+%\cleardoublepage\include{FrontBackmatter/Colophon}
+% ********************************************************************
+% Game Over: Restore, Restart, or Quit?
+%*******************************************************
+\end{document}
+% ********************************************************************
