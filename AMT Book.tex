@@ -9,6 +9,18 @@
 
 \usepackage{listings}
 
+\lstdefinestyle{amt}{
+  basicstyle=\scriptsize\ttfamily,
+  stringstyle=,
+  numbers=left,
+  stepnumber=1,
+  captionpos=b
+}
+
+\usepackage{breakurl}
+
+
+
 %********************************************************************
 % Note: Make all your adjustments in here
 %*******************************************************
@@ -57,17 +69,23 @@
 %\setcounter{page}{90}
 % use \cleardoublepage here to avoid problems with pdfbookmark
 
+\ctparttext{This introductory part introduces the notion of \emph{multi-tiered software architecture}. It proposes a reference model, which consists of five different tiers. It also gives a high-level overview of the \ac{Java EE} platform. It explains how this particular technology stack can be used to \emph{build} and \emph{run} multi-tiered applications. The Java EE development cycle, through which developers write Java code and generate \ac{WAR} packages then deployed in a compliant application servers is presented. In terms of practice and experimental tasks, while reading this part, the reader is invited to install and execute three different Java EE application servers. The reader is also invited to deploy an existing application in these servers, to understand what it means to run a Java EE application.}
 
 \part{Introduction}\label{pt:introduction}
 \include{chapters/chapter-intro-to-javaee}
 
-%\part{Old-style Java EE}\label{pt:old-style}
-%\chapter{Client and presentation tier}\label{ch:first-steps}
-%\section{The Model View Controller pattern}
-%\section{AJAX and the Single Page Application pattern}
-%\section{The Inversion of Control pattern}
-%\section{The Pipes and Filters pattern}
-%\section{Concurrency in the Servlet API}
+\ctparttext{This part introduces the core APIs that are part of the umbrella \ac{Java EE} specification. We use the terms \emph{legacy} and \emph{old-style} because many new projects use frameworks built on top of the \ac{Java EE} APIs. These frameworks hide details and offer a higher level of abstraction. Even if they make developers more productive, it is important to understand what happens behind the scenes, in the foundations of the platform. Furthermore, there are still many companies who need to maintain older applications, built directly on top of Java EE. There is a high probability for a software engineer to encounter such applications in the professional life.
+
+In the chapter dedicated to the \emph{client tier}, we review several types of clients (thin clients, rich clients, etc.). We also look at the communication between client-side and server-side components.
+
+In the chapter dedicated to the \emph{presentation tier}, we present three design patterns: the \ac{MVC} pattern, the \ac{IoC} pattern and the Pipes and filters pattern. We present these patterns in generic terms, as they can be applied in any technology stack. We also show how they can be concretely applied with Java EE components.
+
+[More content to be added for the business, integration and resources tiers.]
+}
+
+\part{Old-style Java EE}\label{pt:old-style}
+\include{chapters/chapter-client-tier}
+\include{chapters/chapter-presentation-tier}
 %
 %\chapter{Business tier}\label{ch:first-steps}
 %\section{The Dependency Injection pattern}
@@ -79,7 +97,11 @@
 %\section{Boiler plate code and reflection}
 %\section{Object Relational Mapping}
 %
-%\part{Modern Java EE}\label{pt:old-style}
+
+\ctparttext{This part presents a selection of frameworks that have been built on top of \ac{Java EE} APIs and are currently very popular in the market. These frameworks aim to make developers more productive, by providing additional capabilities and by hiding some of the implementation details. They also address the evolution towards the cloud and micro-services architecture. This topic has been a gap in the Java EE specification (this will be one focus area for its future versions) for a long time, which is one reason to explain the popularity of the frameworks.
+}
+
+\part{Modern Java EE}\label{pt:old-style}
 %
 %\chapter{Micro-services with Springboot}\label{ch:first-steps}
 %\section{The Spring Framework}
@@ -90,11 +112,16 @@
 %
 %\chapter{APIs with Spring Data REST}\label{ch:first-steps}
 %
-%\part{Software engineering practices}\label{pt:old-style}
+
+\ctparttext{This part presents software engineering practices that are recommended when developing multi-tiered applications. The goal of these practices is to improve the productivity of the team and the quality of the developed product. A lot of these practices are related to testing, which is a broad subject.}
+
+\part{Software engineering practices}\label{pt:old-style}
+%\include{chapters/chapter-performance-load-testing}
+
 %
+%\chapter{Load and performance testing}\label{ch:first-steps}
 %\chapter{Contract-first development of REST APIs}\label{ch:first-steps}
 %\chapter{Continuous integration}\label{ch:first-steps}
-%\chapter{Load and performance testing}\label{ch:first-steps}
 %\chapter{User Interface testing}\label{ch:first-steps}
 %\chapter{Behaviour Driven Design}\label{ch:first-steps}
 

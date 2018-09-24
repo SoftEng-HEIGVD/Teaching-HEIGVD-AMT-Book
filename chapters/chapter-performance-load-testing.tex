@@ -1,0 +1,31 @@
+%************************************************
+\chapter{Performance and Load Testing}
+\label{ch:performance-load-testing}
+%************************************************
+
+\section{Introduction}
+
+When creating a software product, the team has two consider two types of requirements:
+
+\begin{itemize}
+\item the \emph{functional requirements} specify \emph{what} the software should do. When doing a use case analysis, the team identifies the actors (the categories of users and external systems) which interact with the system. The team also enlists the features provided by the system as a list of use cases and scenarios.
+\item The \emph{non-functional requirements} specify and quantify various qualities that the system should have. For instance, the team should assess what are the needs in terms of performance, scalability, availability, security, maintainability, manageability, etc. This is a critical part of the analysis, because it should drive the architecture of the system. Making a sound architectural decision is about making the right \emph{tradeoff} between the cost of a solution and its impact on non-functional requirements. For instance, availability is always somewhat important. It is possible, but very complex and costly to build systems with a 99.999\% uptime. The first task is to define what is the appropriate availability level for the system. The second task is to propose a technical design that is expected to reach that level. The third, very important and often overlooked, is to actually measure if the target level can be reached.
+\end{itemize}
+
+In this chapter we take a look at the performance of the application, one of the non-functional requirements. We show how it is possible to measure the performance of a web application, also when it is is under heavy load. We present Apache JMeter, an open source tool that supports this testing activity.
+
+\section{Testing web applications with Apache JMeter}
+
+\subsection{Installation and configuration}
+\subsection{Concepts}
+\subsection{Scenarios and virtual users}
+
+\section{Case study: thread-safety of the Servlet API}
+
+\section{Case study: impact of caching in multi-tiered applications}
+
+\section{Questions}
+
+To answer these questions, you will need to have read the chapter but also to have done some research. Make sure that you are able to answer every question. Discuss your responses with your peers.
+
+
