@@ -16,3 +16,9 @@
 \contentsline {lstlisting}{\numberline {3.6}The deployment descriptor}{28}{lstlisting.3.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {3.7}A servlet filter example}{33}{lstlisting.3.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {4.1}Warning displayed when launching JMeter}{40}{lstlisting.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {4.2}Incorrect implementation of the counter servlet}{43}{lstlisting.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {4.3}The counter servlet modified to deal with concurrent requests}{46}{lstlisting.4.3}
