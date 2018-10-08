@@ -71,6 +71,7 @@ JMeter can be used on a single client machine and this is often enough to study 
 Test plans can be created from scratch, using the tree view in the JMeter user interface. It is also possible to create a test plan by recording browser activity. To do that, JMeter is first configured to operate as an HTTP proxy. The browser is configured to go via through that proxy. The user then goes through the scenario, clicks on links, fills out forms, etc. Hence, JMeter senses every HTTP request and can automatically generate a test plan, with HTTP samplers. The generated test plan is a good starting point, but often needs to be cleaned up and adjusted. This technique is described in a specific \href{https://jmeter.apache.org/usermanual/jmeter_proxy_step_by_step.html}{tutorial} in the JMeter documentation.
 
 \section{Case study: thread-safety of the Servlet API}
+\label{section:thread-safety-servlets-jmeter}
 
 To demonstrate the use of JMeter and to show how load testing can uncover bugs, we now consider a concrete use case:
 

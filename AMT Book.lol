@@ -17,8 +17,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {3.7}A servlet filter example}{33}{lstlisting.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {4.1}Warning displayed when launching JMeter}{40}{lstlisting.4.1}
+\contentsline {lstlisting}{\numberline {4.1}Local interface defined for a stateless session bean}{39}{lstlisting.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {4.2}Incorrect implementation of the counter servlet}{43}{lstlisting.4.2}
+\contentsline {lstlisting}{\numberline {4.2}Stateless session bean implementation}{39}{lstlisting.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {4.3}The counter servlet modified to deal with concurrent requests}{46}{lstlisting.4.3}
+\contentsline {lstlisting}{\numberline {4.3}Bad practice: dependency is instantiated by the client service}{48}{lstlisting.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {4.4}Better practice: dependency is looked up in a registry}{48}{lstlisting.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {4.5}Dependency is injected by the framework as part of the lifecycle}{49}{lstlisting.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {4.6}Injecting a reference to a SLSB into a servlet}{49}{lstlisting.4.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {5.1}Warning displayed when launching JMeter}{56}{lstlisting.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {5.2}Incorrect implementation of the counter servlet}{59}{lstlisting.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {5.3}The counter servlet modified to deal with concurrent requests}{62}{lstlisting.5.3}
