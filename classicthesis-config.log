@@ -1,0 +1,38 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.8)  24 SEP 2018 12:26
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**classicthesis-config.tex
+(./classicthesis-config.tex
+LaTeX2e <2018-04-01> patch level 2
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+
+./classicthesis-config.tex:20: LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20   \usepackage{
+                   inputenc}
+? 
+./classicthesis-config.tex:20: Emergency stop.
+ ...                                              
+                                                  
+l.20   \usepackage{
+                   inputenc}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+ 
+Here is how much of TeX's memory you used:
+ 7 strings out of 492649
+ 337 string characters out of 6129623
+ 56687 words of memory out of 5000000
+ 3989 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 5i,0n,6p,147b,14s stack positions out of 5000i,500n,10000p,200000b,80000s
+./classicthesis-config.tex:20:  ==> Fatal error occurred, no output PDF file pr
+oduced!

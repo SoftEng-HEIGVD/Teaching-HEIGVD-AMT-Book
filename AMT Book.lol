@@ -29,8 +29,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {lstlisting}{\numberline {4.6}Injecting a reference to a SLSB into a servlet}{49}{lstlisting.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {5.1}Warning displayed when launching JMeter}{56}{lstlisting.5.1}
+\contentsline {lstlisting}{\numberline {5.1}Implement a DAO with a Stateless Session Bean}{57}{lstlisting.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {5.2}Incorrect implementation of the counter servlet}{59}{lstlisting.5.2}
+\contentsline {lstlisting}{\numberline {6.1}Warning displayed when launching JMeter}{64}{lstlisting.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {5.3}The counter servlet modified to deal with concurrent requests}{62}{lstlisting.5.3}
+\contentsline {lstlisting}{\numberline {6.2}Incorrect implementation of the counter servlet}{67}{lstlisting.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {lstlisting}{\numberline {6.3}The counter servlet modified to deal with concurrent requests}{70}{lstlisting.6.3}
