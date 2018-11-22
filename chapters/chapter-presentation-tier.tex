@@ -29,10 +29,10 @@ The pattern involves the following participants:
 \item the \emph{service} is a fourth component that is not strictly mandatory, but that is used very often to keep the code of the controllers small. In theory, a controller could create the model itself: by doing some sort of computation, by looking up information in a data store, etc. In practice, the controller will very often delegate this task to a service. In other words, it will handle the situation like this: ``Based on what I have seen in the URL and query string, I decide that Service A can handle the user action and generate a model for me. I also decide that View 1 can generate a representation of the model. I am going to coordinate the work between these two helpers.''
 \end{itemize}
 
-Figure \ref{fig:client-tier} shows the sequence of events for a typical user interaction round trip.
+Figure \ref{fig:mvc-in-presentation-tier} shows the sequence of events for a typical user interaction round trip.
 \begin{enumerate}
-\item The user is visiting an online shop and is on a page that displays a list of products. For each product, there is a picture, a description, a price and an hyperlink entitled "Show details". The user has found an interesting product and clicks on the hyperlink. This where we start our exploration of the \ac{MVC} pattern.
-\item The browser sends an HTTP request to the server. The method is \texttt{GET} and the URL is something like \url{http://shop.com/productsController?productId=4224&action=showDetails}. You can think of the HTTP request as an event, just like you would have a mouse event or a button even in a GUI toolkit.
+\item The user is visiting an online shop and is on a page that displays a list of products. For each product, there is a picture, a description, a price and an hyperlink entitled "Show details". The user has found an interesting product and clicks on the hyperlink. This is where we start our exploration of the \ac{MVC} pattern.
+\item The browser sends an HTTP request to the server. The method is \texttt{GET} and the URL is something like \url{http://shop.com/productsController?productId=4224&action=showDetails}. You can think of the HTTP request as an event, just like you would have a mouse event or a button event in a GUI toolkit.
 \item On the server side, the HTTP request is routed to a component, which is the Controller in our pattern. Depending on the language and platform, the Controller might be an object or a function.
 \item The Controller is lazy and tries to do as little as possible. Its first job is to figure out what other components can help him. Firstly, by looking at the attributes of the HTTP request (the URL, the query string, etc.), it will decide which business service can handle the request. It then calls the business service.
 \item The Service does its job, which usually means getting some data, applying some business rules and computing a response. The response from the Service to the Controller is the Model in the pattern. It is usually an object or a graph of objects.
@@ -49,7 +49,7 @@ Figure \ref{fig:client-tier} shows the sequence of events for a typical user int
 
 \subsection{Applying MVC in Java EE}
 
-Let us know see how we can concretely implement the \ac{MVC} pattern with Java EE. For that purpose, we introduce two \ac{JSR}: the Servlet API and the \ac{JSP} API. 
+Let us now see how we can concretely implement the \ac{MVC} pattern with Java EE. For that purpose, we introduce two \ac{JSR}: the Servlet API and the \ac{JSP} API. 
 
 A servlet is a Java object that implements a few methods, which are invoked when an HTTP request has been sent by a client. The responsibility of the servlet is to analyze the request (it has access to the URI, the HTTP headers, the body, etc.) and to prepare a response. A simple example is provided in Listing \ref{lst:quoteServlet}. 
 
@@ -85,7 +85,7 @@ This is the simplest example to demonstrate how to build dynamic web application
 
 \marginpar{Behind the scenes, the application server translates every \ac{JSP} template into Java source code, which it then compiles. The source code is actually a subclass of \texttt{HttpServlet}.}
 
-Let us improve the code and introduce a View. For that purpose, we will use the \ac{JSP} technology. Historically, JSP was created a couple of years after the Servlet API. The technology provided a standard way to implement dynamic web pages and has been used extensively. It has evolved a lot over the years and many features have bean added either directly in its specification, or in companion \ac{JSR}s. Today, JSP is still supported by Java EE application servers and is a perfectly viable choice for building web applications. However, the technology has disappeared from official Java EE tutorials and seems to have lost traction with open source communities. Two factors can explain the situation:
+Let us improve the code and introduce a View. For that purpose, we will use the \ac{JSP} technology. Historically, JSP was created a couple of years after the Servlet API. The technology provided a standard way to implement dynamic web pages and has been used extensively. It has evolved a lot over the years and many features have been added either directly in its specification, or in companion \ac{JSR}s. Today, JSP is still supported by Java EE application servers and is a perfectly viable choice for building web applications. However, the technology has disappeared from official Java EE tutorials and seems to have lost traction with open source communities. Two factors can explain the situation:
 
 \marginpar{\ac{JSP} has disappeared from the official Java EE tutorial. The last version that presents the technology and gives example is \href{https://docs.oracle.com/javaee/5/tutorial/doc/}{the Java EE 5 Tutorial.}}
 
@@ -94,7 +94,7 @@ Let us improve the code and introduce a View. For that purpose, we will use the 
 \item At the same time, non-standard alternatives to \ac{JSP} have been provided by open source projects. \ac{JSP} is essentially a templating technology, and so are projects such as Thymeleaf, FreeMarker or Velocity. Frameworks that have been developed on top of Java EE, and in particular the very popular Spring MVC, do support \ac{JSP}, but often start by presenting other template engines.
 \end{itemize}
 
-Let us now how Java Server Pages look like and how they can be used in combination with servlets. The repository \href{https://github.com/SoftEng-HEIGVD/Teaching-HEIGVD-AMT-MVC-simple-example}{SoftEng-HEIGVD/Teaching-HEIGVD-AMT-MVC-simple-example}, hosted in GitHub, contains the code that we review here. Instructions for running the code with IntelliJ IDEA are provided in the repository \texttt{README.md} file.
+Let us now see how Java Server Pages look like and how they can be used in combination with servlets. The repository \href{https://github.com/SoftEng-HEIGVD/Teaching-HEIGVD-AMT-MVC-simple-example}{SoftEng-HEIGVD/Teaching-HEIGVD-AMT-MVC-simple-example}, hosted in GitHub, contains the code that we review here. Instructions for running the code with IntelliJ IDEA are provided in the repository \texttt{README.md} file.
 
 \lstset{
 	caption={Structure of the simple MVC project},
